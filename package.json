@@ -1,12 +1,20 @@
 {
   "name": "familiar-ratings-app",
   "version": "1.0.0",
-  "description": "Ratings functionality for Familiar Mythic Arena",
-  "main": "server",
+  "description": "Tournament ratings app for Familiar: Mythic Arena",
   "author": "Denny S. Temple <dev@dentemple.com> (https://dentemple.com/)",
   "license": "UNLICENSED",
+  "main": "dist",
   "private": true,
   "scripts": {
+    "build": "tsc",
+    "start": "yarn start:server",
+    "start:server": "yarn build && nodemon dist",
+    "production": "yarn production:server",
+    "production:server": "yarn build && node dist",
+    "test": "jest -i",
+    "test:watch": "jest -i --watch",
+    "-----": "-----",
     "audit": "npm audit",
     "audit:fix": "npm audit --fix",
     "deps": "ncu",
@@ -19,7 +27,32 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.7.1",
+    "@types/supertest": "^2.0.8",
+    "husky": ">=1",
+    "jest": "^24.8.0",
+    "lint-staged": ">=8",
     "nodemon": "^1.19.1",
-    "npm-check-updates": "^3.1.21"
+    "npm-check-updates": "^3.1.21",
+    "prettier": "^1.18.2",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
