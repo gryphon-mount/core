@@ -1,4 +1,4 @@
-# Tournament ratings app for Familiar: Mythic Arena
+# Mobile & Web Applications for Familiar: Mythic Arena
 
 ---
 
