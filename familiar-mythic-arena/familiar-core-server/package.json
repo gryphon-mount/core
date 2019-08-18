@@ -12,7 +12,6 @@
     "start:prod": "npm run build && node dist",
     "test": "jest -i",
     "test:watch": "jest -i --watch",
-    "----": "----",
     "-----": "-----",
     "deps": "ncu",
     "deps:update": "ncu -u && yarn",
@@ -24,7 +23,7 @@
     "concurrently": "^4.1.2",
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
-    "familiar-ratings-client": "1.0.0"
+    "familiar-rankings-client": "^0.1.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.0",

@@ -18,12 +18,12 @@ class RenderStore extends Component {
   render() {
     const preStyle = {
       // box
-      backgroundColor: '#f3f3f3',
+      backgroundColor: '#f1f1f1',
       border: '0.5px solid #777',
       borderRadius: 10,
       minHeight: 100,
       margin: 40,
-      padding: 20,
+      padding: '0 30px',
 
       // text
       fontFamily: 'monospace',
@@ -38,10 +38,13 @@ class RenderStore extends Component {
 
     return (
       <pre style={preStyle}>
+        <p>
+          <strong>Application Data</strong>
+        </p>
         {JSON.stringify(store, null, 2)}
         <p>
           <button style={buttonStyle} onClick={handleClick}>
-            Test Dispatch
+            Action Test
           </button>
         </p>
       </pre>

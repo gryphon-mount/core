@@ -7,7 +7,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const clientpath = '../../node_modules/familiar-ratings-client/build'
+const clientpath = '../../node_modules/familiar-rankings-client/build'
 
 app.use(express.static(path.join(__dirname, clientpath)))
 

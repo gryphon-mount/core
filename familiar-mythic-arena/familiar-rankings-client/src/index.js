@@ -17,35 +17,19 @@ import { theme } from './theme'
 // util
 import * as serviceWorker from './utils/serviceWorker'
 
-// -----
+// components
+import App from './App'
 
-let root = document.getElementById('root')
-
-let render = () => {
-  const App = require('./App').default
-
-  ReactDOM.render(
-    <Provider store={configureStore()}>
-      <ThemeProvider theme={theme}>
-        <Router>
-          <App />
-        </Router>
-      </ThemeProvider>
-    </Provider>,
-    root
-  )
-}
-
-// Configure Hot Module Reloading
-if (process.env.NODE_ENV !== 'production' && module.hot) {
-  module.hot.accept(['./App', './theme'], () => {
-    render()
-  })
-}
-
-render()
-
-// -----
+ReactDOM.render(
+  <Provider store={configureStore()}>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <App />
+      </Router>
+    </ThemeProvider>
+  </Provider>,
+  document.getElementById('root')
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

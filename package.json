@@ -9,7 +9,7 @@
     "build": "npm run bootstrap && lerna run --stream build",
     "start": "lerna run --parallel --no-bail start",
     "start:server": "cd familiar-mythic-arena/familiar-core-server && npm start",
-    "start:client": "cd familiar-mythic-arena/familiar-ratings-client && npm start",
+    "start:client": "cd familiar-mythic-arena/familiar-rankings-client && npm start",
     "test": "lerna run --stream test",
     "test:watch": "lerna run --parallel test:watch",
     "----": "----",
