@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "lerna run --stream build",
+    "build": "npm run bootstrap && lerna run --stream build",
     "start": "lerna run --parallel --no-bail start",
     "start:server": "cd familiar-mythic-arena/familiar-core-server && npm start",
     "start:client": "cd familiar-mythic-arena/familiar-ratings-client && npm start",

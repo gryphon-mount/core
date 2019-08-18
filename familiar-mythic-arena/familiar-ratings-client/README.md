@@ -1,1 +1,1 @@
-# Rankings Client for Familiar: Mythic Arena
+# Tournament Ratings App for Familiar: Mythic Arena
