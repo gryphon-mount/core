@@ -1,0 +1,59 @@
+{
+  "name": "familiar-core-server",
+  "version": "1.0.0",
+  "description": "Core server for Familiar: Mythic Arena",
+  "author": "Denny S. Temple (https://dentemple.com/)",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "dist",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && nodemon dist",
+    "start:prod": "npm run build && node dist",
+    "test": "jest -i",
+    "test:watch": "jest -i --watch",
+    "----": "----",
+    "-----": "-----",
+    "deps": "ncu",
+    "deps:update": "ncu -u && yarn",
+    "format": "prettier \"server/**/**.{ts,js,css,json,md}\"",
+    "format:check": "prettier --check \"server/**/**.{ts,js,css,json,md}\""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "familiar-ratings-client": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.7.2",
+    "@types/supertest": "^2.0.8",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "linkemon": "0.0.2",
+    "lint-staged": "^9.2.3",
+    "nodemon": "^1.19.1",
+    "npm-check-updates": "^3.1.21",
+    "prettier": "^1.18.2",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

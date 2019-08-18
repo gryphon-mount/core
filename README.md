@@ -1,4 +1,4 @@
-# Mobile & Web Applications for Familiar: Mythic Arena
+# Software & API for Gryphon Mount Games
 
 ---
 

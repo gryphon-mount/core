@@ -1,59 +1,28 @@
 {
-  "name": "familiar-mythic-arena",
+  "name": "gryphon-mount",
   "version": "1.0.0",
-  "description": "Mobile & Web Applications for Familiar: Mythic Arena",
+  "description": "Software & API for Gryphon Mount Games",
   "author": "Denny S. Temple (https://dentemple.com/)",
   "license": "UNLICENSED",
   "private": true,
-  "main": "dist",
   "scripts": {
-    "build": "tsc",
-    "start": "concurrently --kill-others-on-fail \"yarn start:server\" \"yarn start:client:tournament\"",
-    "start:server": "yarn build && nodemon dist",
-    "start:client:tournament": "cd clients && cd tournament-ratings-web && yarn start",
-    "production": "yarn production:server",
-    "production:server": "yarn build && node dist",
-    "test": "jest -i",
-    "test:watch": "jest -i --watch",
+    "build": "lerna run --stream build",
+    "start": "lerna run --parallel --no-bail start",
+    "start:server": "cd familiar-mythic-arena/familiar-core-server && npm start",
+    "start:client": "cd familiar-mythic-arena/familiar-ratings-client && npm start",
+    "test": "lerna run --stream test",
+    "test:watch": "lerna run --parallel test:watch",
+    "----": "----",
+    "install": "lerna link",
+    "bootstrap": "lerna bootstrap",
     "-----": "-----",
-    "audit": "npm audit",
-    "audit:fix": "npm audit --fix",
-    "deps": "ncu",
-    "deps:update": "ncu -u && npm install && npm run audit"
-  },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "concurrently": "^4.1.1",
-    "cookie-parser": "^1.4.4",
-    "express": "^4.17.1"
+    "deps": "lerna run --stream --no-bail deps",
+    "deps:update": "lerna run --stream --no-bail deps:update && yarn bootstrap",
+    "format": "lerna run --stream --no-bail format",
+    "format:check": "lerna run --stream --no-bail format:check"
   },
   "devDependencies": {
-    "@types/express": "^4.17.0",
-    "@types/jest": "^24.0.17",
-    "@types/node": "^12.7.1",
-    "@types/supertest": "^2.0.8",
-    "husky": ">=1",
-    "jest": "^24.8.0",
-    "lint-staged": ">=8",
-    "nodemon": "^1.19.1",
-    "npm-check-updates": "^3.1.21",
-    "prettier": "^1.18.2",
-    "superagent": "^5.1.0",
-    "supertest": "^4.0.2",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.3.0",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+    "lerna": "^3.16.4"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+  "dependencies": {}
 }
