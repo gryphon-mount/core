@@ -8,8 +8,8 @@
   "main": "dist",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && nodemon dist",
-    "start:prod": "npm run build && node dist",
+    "start": "nodemon dist",
+    "start:prod": "node dist",
     "test": "jest -i",
     "test:watch": "jest -i --watch",
     "-----": "-----",
@@ -23,7 +23,7 @@
     "concurrently": "^4.1.2",
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
-    "familiar-rankings-client": "^0.1.0"
+    "rankings-client": "^1.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.0",

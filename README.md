@@ -2,7 +2,7 @@
 
 ![Gryphon Mount Games](/docs/gmg-logo.jpg)
 
-# Core Software Repository
+# Core Software
 
 </div>
 

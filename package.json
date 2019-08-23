@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "build": "npm run bootstrap && lerna run --stream build",
-    "start": "lerna run --parallel --no-bail start",
+    "start": "npm run build && lerna run --parallel --no-bail start",
     "start:server": "cd familiar-mythic-arena/familiar-core-server && npm start",
     "start:client": "cd familiar-mythic-arena/familiar-rankings-client && npm start",
     "test": "lerna run --stream test",

@@ -3,13 +3,12 @@ import express from 'express'
 import bodyParser from 'body-parser'
 
 const app = express()
+const clientpath = 'node_modules/rankings-client/build'
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const clientpath = '../../node_modules/familiar-rankings-client/build'
-
-app.use(express.static(path.join(__dirname, clientpath)))
+app.use(express.static(clientpath))
 
 app.get('/api', (req: any, res: any) =>
   res.send({ ping: 'ok', route: req.url })

@@ -1,10 +1,10 @@
 {
-  "name": "familiar-rankings-client",
-  "version": "0.1.0",
+  "name": "rankings-client",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "react-scripts build",
-    "start": "npm run build && react-scripts start",
+    "start": "react-scripts start",
     "test": "react-scripts test --watchAll=false --runInBand",
     "test:watch": "react-scripts test --runInBand",
     "-----": "-----",
