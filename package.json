@@ -1,28 +1,33 @@
 {
   "name": "gryphon-mount",
   "version": "1.0.0",
-  "description": "Software & API for Gryphon Mount Games",
+  "description": "Core Software for Gryphon Mount Games",
   "author": "Denny S. Temple (https://dentemple.com/)",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
   "scripts": {
     "build": "npm run bootstrap && lerna run --stream build",
     "start": "npm run build && lerna run --parallel --no-bail start",
-    "start:server": "cd familiar-mythic-arena/familiar-core-server && npm start",
-    "start:client": "cd familiar-mythic-arena/familiar-rankings-client && npm start",
+    "start:server": "cd familiar-mythic-arena/core-server && npm start",
+    "start:client": "cd familiar-mythic-arena/rankings-client && npm start",
+    "start:admin": "cd familiar-mythic-arena/admin-client && npm start",
     "test": "lerna run --stream test",
     "test:watch": "lerna run --parallel test:watch",
     "----": "----",
     "install": "lerna link",
     "bootstrap": "lerna bootstrap",
     "-----": "-----",
-    "deps": "lerna run --stream --no-bail deps",
-    "deps:update": "lerna run --stream --no-bail deps:update && yarn bootstrap",
+    "audit": "npm audit && lerna run --stream --no-bail audit",
+    "audit:fix": "npm audit fix && lerna run --stream --no-bail audit:fix && npm run bootstrap",
+    "deps": "ncu && lerna run --stream --no-bail deps",
+    "deps:update": "ncu -u && npm i && lerna run --stream --no-bail deps:update && npm run bootstrap",
     "format": "lerna run --stream --no-bail format",
     "format:check": "lerna run --stream --no-bail format:check"
   },
+  "dependencies": {},
   "devDependencies": {
-    "lerna": "^3.16.4"
-  },
-  "dependencies": {}
+    "lerna": "^3.16.4",
+    "npm-check-updates": "^3.1.21",
+    "prettier": "^1.18.2"
+  }
 }

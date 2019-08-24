@@ -24,17 +24,33 @@ Gryphon Mount is an indie startup dedicated to providing casual tabletop and mob
 
 [View the development build here](https://familiar-mythic-arena.netlify.com/)
 
+## Open Source Libraries
+
+### [`familiar-elo`](packages/familiar-elo/README.md)
+
+TBD
+
 ---
+
+## Contributor Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
 
 ## License
 
 ### Source Code
 
-[PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/)
+[PolyForm Noncommercial License 1.0.0](LICENSE.md)
 
-The source code is available for use under a Noncommercial License. [See the full text for more details](LICENSE.txt).
+The source code is available for use under a Noncommercial License.
 
 Copyright © 2019 [Denny S. Temple](https://dentemple.com)
+
+### Packages
+
+Specific packages in this mono-repo may be listed under their own open-source or source-available licenses.
+
+See the relevant project for additional information.
 
 ### Familiar: Mythic Arena
 

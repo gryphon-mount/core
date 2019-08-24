@@ -1,0 +1,27 @@
+{
+  "name": "familiar-elo",
+  "version": "0.1.0",
+  "description": "Calculates ELO rankings and results",
+  "author": "Denny S. Temple <dev@dentemple.com> (https://dentemple.com/)",
+  "homepage": "https://github.com/gryphon-mount/core#readme",
+  "license": "BSD-3-Clause",
+  "main": "lib/familiar-elo.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gryphon-mount/core.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/gryphon-mount/core/issues"
+  },
+  "dependencies": {}
+}

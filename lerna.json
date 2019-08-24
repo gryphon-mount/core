@@ -1,5 +1,5 @@
 {
   "command": {},
-  "packages": ["familiar-mythic-arena/*"],
+  "packages": ["familiar-mythic-arena/*", "packages/*"],
   "version": "independent"
 }
