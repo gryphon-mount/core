@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Page404 = () => (
+export const Page404 = () => (
   <div>
     <p>Page404</p>
   </div>

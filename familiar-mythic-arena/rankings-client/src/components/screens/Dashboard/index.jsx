@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dasbhoard = () => (
+export const Dasbhoard = () => (
   <div>
     <p>Dasbhoard</p>
   </div>

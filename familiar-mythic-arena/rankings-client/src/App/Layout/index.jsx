@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 
 import { GlobalStyle } from 'theme'
 import MainContainer from './MainContainer'
-import NavBar from './NavBar'
+import RenderStore from 'utils/RenderStore'
 
 const Layout = ({ children }) => (
   <>
     <GlobalStyle />
-    <NavBar />
     <MainContainer>{children}</MainContainer>
+    <RenderStore />
   </>
 )
 

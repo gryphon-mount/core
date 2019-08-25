@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import 'normalize.css'
 
 export const colors = {
   black: '#111111',
@@ -22,7 +21,6 @@ export const theme = {
   colors,
   fonts
 }
-export default theme
 
 export const GlobalStyle = createGlobalStyle`
 body {
@@ -58,3 +56,5 @@ ul>li:before {
   padding-right: 5px;
 }
 `
+
+export default theme

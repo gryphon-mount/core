@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Messages = () => (
+export const Messages = () => (
   <div>
     <p>Messages</p>
   </div>

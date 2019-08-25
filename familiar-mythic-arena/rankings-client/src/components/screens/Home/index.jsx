@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Home = () => (
+export const Home = () => (
   <div>
     <p>Home</p>
   </div>
