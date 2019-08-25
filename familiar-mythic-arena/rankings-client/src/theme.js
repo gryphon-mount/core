@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
+import 'normalize.css'
 
 export const colors = {
   black: '#111111',
   white: '#ffffff',
+  gray: '#cccccc',
   links: '#61dafb'
 }
 
@@ -13,7 +15,13 @@ export const fonts = {
   monospace: `source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace`
 }
 
-export const theme = { colors, fonts }
+export const boxShadow = `0 2px 4px -1px ${colors.gray}`
+
+export const theme = {
+  boxShadow,
+  colors,
+  fonts
+}
 export default theme
 
 export const GlobalStyle = createGlobalStyle`
@@ -24,8 +32,10 @@ body {
 
   /* content */
   color: ${colors.black};
-  background-color: ${colors.black};
+  background-color: ${colors.white};
   font-family: ${fonts.primary};
+  font-size: 1.1em;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,5 +46,15 @@ h1, h2, h3, h4, h5, h6 {
 
 code {
   font-family: ${fonts.monospace};
+}
+
+ul {
+   list-style: none;
+}
+
+ul>li:before {
+  content: "•";
+  font-size: 1em;
+  padding-right: 5px;
 }
 `
