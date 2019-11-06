@@ -1,13 +1,11 @@
 import React from 'react'
-import RenderStore from 'utils/RenderStore'
+import Layout from './Layout'
 import Routes from './Routes'
 
-const App = () => (
-  <div>
-    <h3>Familiar: Mythic Arena</h3>
+export const App = () => (
+  <Layout>
     <Routes />
-    <RenderStore />
-  </div>
+  </Layout>
 )
 
 export default App

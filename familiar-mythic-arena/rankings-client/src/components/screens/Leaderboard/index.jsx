@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Leaderboard = () => (
+export const Leaderboard = () => (
   <div>
     <p>Leaderboard</p>
   </div>

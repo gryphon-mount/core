@@ -1,10 +1,10 @@
 import React from 'react'
-import TestMe from 'App/index.js'
+import { App } from 'App/index.js'
 
 describe('App', () => {
-  describe('App/index.js', () => {
+  describe('Top-level container', () => {
     it('renders without crashing', () => {
-      shallow(<TestMe />)
+      shallow(<App />)
     })
   })
 })

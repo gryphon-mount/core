@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Locations = () => (
+export const Locations = () => (
   <div>
     <p>Locations</p>
   </div>

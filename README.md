@@ -6,7 +6,7 @@
 
 </div>
 
-Gryphon Mount is an indie startup dedicated to providing casual tabletop and mobile games.
+Gryphon Mount is an indie startup dedicated to building tabletop and mobile games for the casual market.
 
 [Homepage](https://gryphonmountgames.com) | [Twitter](https://twitter.com/gryphonmount) | [Facebook](https://www.facebook.com/gryphonmountgames/) | [Instagram](https://www.instagram.com/gryphonmountgames/)
 
@@ -24,12 +24,6 @@ Gryphon Mount is an indie startup dedicated to providing casual tabletop and mob
 
 [View the development build here](https://familiar-mythic-arena.netlify.com/)
 
-## Open Source Libraries
-
-### [`familiar-elo`](packages/familiar-elo/README.md)
-
-TBD
-
 ---
 
 ## Contributor Code of Conduct
@@ -40,20 +34,18 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 
 ### Source Code
 
-[PolyForm Noncommercial License 1.0.0](LICENSE.md)
-
-The source code is available for use under a Noncommercial License.
+The source code is _Free and Open Source_ under the [GNU Affero General Public License (AGPLv3)](LICENSE).
 
 Copyright © 2019 [Denny S. Temple](https://dentemple.com)
-
-### Packages
-
-Specific packages in this mono-repo may be listed under their own open-source or source-available licenses.
-
-See the relevant project for additional information.
 
 ### Familiar: Mythic Arena
 
 All Rights Reserved.
 
 Copyright @ 2018 [Gryphon Mount Games LLC](https://gryphonmountgames.com/about/)
+
+### Additional packages
+
+Specific libraries that are published in this mono-repository may be under separate licenses.
+
+View the package's subdirectory for additional information.

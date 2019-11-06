@@ -9,15 +9,15 @@ import 'whatwg-fetch'
 import { Provider } from 'react-redux'
 import configureStore from './state/store'
 
-// style
+/* style */
 import 'normalize.css'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './theme'
 
-// util
+/* utils */
 import * as serviceWorker from './utils/serviceWorker'
 
-// components
+/* components */
 import App from './App'
 
 ReactDOM.render(

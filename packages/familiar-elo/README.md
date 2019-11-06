@@ -14,7 +14,7 @@ const familiarElo = require('familiar-elo');
 
 ## License
 
-[3-Clause BSD License](LICENSE.txt)
+[3-Clause BSD License](LICENSE)
 
 Copyright © 2019 Denny S. Temple
 

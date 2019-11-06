@@ -1,6 +1,6 @@
 import React from 'react'
 
-const User = () => (
+export const User = () => (
   <div>
     <p>User</p>
   </div>
