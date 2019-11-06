@@ -7,7 +7,9 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
+    "build:mock": "REACT_APP_USE_MOCK_DATA=true react-scripts build",
     "start": "react-scripts start",
+    "start:mock": "REACT_APP_USE_MOCK_DATA=true react-scripts start",
     "test": "react-scripts test --watchAll=false --runInBand",
     "test:watch": "react-scripts test --runInBand",
     "-----": "-----",
