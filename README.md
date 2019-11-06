@@ -34,9 +34,7 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 
 ### Source Code
 
-[PolyForm Noncommercial License 1.0.0](LICENSE.md)
-
-The source code is available for use under a Noncommercial License.
+The source code is _Free and Open Source_ under the [GNU Affero General Public License (AGPLv3)](LICENSE).
 
 Copyright © 2019 [Denny S. Temple](https://dentemple.com)
 
@@ -46,8 +44,8 @@ All Rights Reserved.
 
 Copyright @ 2018 [Gryphon Mount Games LLC](https://gryphonmountgames.com/about/)
 
-### Published Packages
+### Additional packages
 
-Specific libraries in this mono-repo may be published under separate open-source licenses.
+Specific libraries that are published in this mono-repository may be under separate licenses.
 
 View the package's subdirectory for additional information.

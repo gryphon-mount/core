@@ -17,17 +17,17 @@
     "install": "lerna link",
     "bootstrap": "lerna bootstrap",
     "-----": "-----",
-    "audit": "npm audit && lerna run --stream --no-bail audit",
-    "audit:fix": "npm audit fix && lerna run --stream --no-bail audit:fix && npm run bootstrap",
-    "deps": "ncu && lerna run --stream --no-bail deps",
-    "deps:update": "ncu -u && npm i && lerna run --stream --no-bail deps:update && npm run bootstrap",
+    "audit": "npm audit fix && lerna run --stream --no-bail audit && npm run bootstrap",
+    "audit:check": "npm audit && lerna run --stream --no-bail audit:check",
+    "update": "ncu -u && lerna run --stream --no-bail update && npm run bootstrap",
+    "update:check": "ncu && npm i && lerna run --stream --no-bail update:check",
     "format": "lerna run --stream --no-bail format",
     "format:check": "lerna run --stream --no-bail format:check"
   },
   "dependencies": {},
   "devDependencies": {
-    "lerna": "^3.16.4",
-    "npm-check-updates": "^3.1.21",
+    "lerna": "^3.18.3",
+    "npm-check-updates": "^3.2.0",
     "prettier": "^1.18.2"
   }
 }
