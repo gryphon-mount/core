@@ -1,15 +1,15 @@
 {
-  "id": 1,
-  "profile_name": "Bethanne Exon",
-  "email": "bexon0@psu.edu",
-  "gender": "Female",
-  "ip_address": "104.168.25.240",
-  "rank": "Virtual secondary core",
-  "rating": 1350,
   "city": "Houston",
-  "state": "Texas",
   "country": "US",
-  "venues": [1, 2, 3],
+  "email": "mockname@psu.edu",
+  "events": [1, 2, 3],
   "friends": [2, 3, 4],
-  "events": [1, 2, 3]
+  "gender": "Female",
+  "id": 1,
+  "ip_address": "104.168.25.240",
+  "profile_name": "Mocky",
+  "rank": "Super Mocker Bros.",
+  "rating": 1120,
+  "region": "Texas",
+  "venues": [1, 2, 3]
 }
