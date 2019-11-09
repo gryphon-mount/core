@@ -10,11 +10,11 @@ app.use(express.static('node_modules/admin-client/build'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/api', (req: any, res: any) =>
+app.get('/api/v1/', (req: any, res: any) =>
   res.send({ ping: 'ok', route: req.url })
 )
 
-app.get('/api/*', (req: any, res: any) =>
+app.get('/api/v1/*', (req: any, res: any) =>
   res.send({ ping: 'ok', route: req.url })
 )
 

@@ -30,7 +30,7 @@ Gryphon Mount is an indie startup dedicated to building tabletop and mobile game
 
 Please note that this project is released with a [Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
 
-## License
+## Licenses
 
 ### Source Code
 

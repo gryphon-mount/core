@@ -20,16 +20,37 @@ import * as serviceWorker from './utils/serviceWorker'
 /* components */
 import App from './App'
 
-ReactDOM.render(
-  <Provider store={configureStore()}>
-    <ThemeProvider theme={theme}>
-      <Router>
-        <App />
-      </Router>
-    </ThemeProvider>
-  </Provider>,
-  document.getElementById('root')
-)
+const render = Component =>
+  ReactDOM.render(
+    <Provider store={configureStore()}>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Component />
+        </Router>
+      </ThemeProvider>
+    </Provider>,
+    document.getElementById('root')
+  )
+
+render(App)
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default
+    render(NextApp)
+  })
+}
+
+// ReactDOM.render(
+//   <Provider store={configureStore()}>
+//     <ThemeProvider theme={theme}>
+//       <Router>
+//         <App />
+//       </Router>
+//     </ThemeProvider>
+//   </Provider>,
+//   document.getElementById('root')
+// )
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
