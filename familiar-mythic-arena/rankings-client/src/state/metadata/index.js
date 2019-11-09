@@ -1,8 +1,9 @@
 import metadata from 'metadata'
 
 /* selectors */
-export const getAppName = ({ metadata }) => metadata.appName
-export const getProductName = ({ metadata }) => metadata.productName
+export const getAppName = ({ metadata: { appName } }) => appName
+export const getProductName = ({ metadata: productName }) => productName
+export const getUseMockData = ({ metadata: useMockData }) => useMockData
 
 /* initial state */
 export const initialState = {
