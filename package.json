@@ -8,9 +8,9 @@
   "scripts": {
     "build": "npm run bootstrap && lerna run --stream build",
     "start": "npm run build && lerna run --parallel --no-bail start",
-    "start:server": "cd familiar/core-server && npm start",
-    "start:client": "cd familiar/rankings-client && npm start",
-    "start:admin": "cd familiar/admin-client && npm start",
+    "start:server": "cd familiar-mythic-arena/core-server && npm start",
+    "start:client": "cd familiar-mythic-arena/rankings-client && npm start",
+    "start:admin": "cd familiar-mythic-arena/admin-client && npm start",
     "test": "lerna run --stream test",
     "test:watch": "lerna run --parallel test:watch",
     "----": "----",
