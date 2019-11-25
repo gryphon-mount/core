@@ -1,147 +1,56 @@
-import mockdata from './mock.json'
-
 /* constants */
-export const INVALIDATE_PROFILE = 'INVALIDATE_PROFILE'
-export const FETCH_PROFILE_REQUEST = 'FETCH_PROFILE_REQUEST'
-export const FETCH_PROFILE_FAILURE = 'FETCH_PROFILE_FAILURE'
-export const FETCH_PROFILE_SUCCESS = 'FETCH_PROFILE_SUCCESS'
+export const INVALIDATE_PROFILE = INVALIDATE_PROFILE
+export const REQUEST_PROFILE = REQUEST_PROFILE
+export const RECEIVE_PROFILE = RECEIVE_PROFILE
+export const FETCH_PROFILE_REQUEST = FETCH_PROFILE_REQUEST
+export const FETCH_PROFILE_FAILURE = FETCH_PROFILE_FAILURE
+export const FETCH_PROFILE_SUCCESS = FETCH_PROFILE_SUCCESS
 
 /* actions */
 export const invalidateProfile = () => ({
   type: INVALIDATE_PROFILE
 })
 
-export const requestProfile = () => ({
-  type: FETCH_PROFILE_REQUEST
+export const requestProfile = (username, password) => ({
+  type: REQUEST_PROFILE,
+  username,
+  password
 })
 
-export const requestProfileFailure = (
+export const receiveProfileFailure = (
   error,
   errorCode,
   receivedAt = Date.now()
 ) => ({
-  type: FETCH_PROFILE_FAILURE,
+  type: RECEIVE_PROFILE,
   error,
   errorCode,
   receivedAt
 })
 
-export const requestProfileSuccess = (json, receivedAt = Date.now()) => {
-  return {
-    type: FETCH_PROFILE_SUCCESS,
-    json,
-    receivedAt
-  }
-}
-
-export const fetchProfile = () => (dispatch, getState) => {
-  dispatch(requestProfile())
-
-  const {
-    meta: { useMockData }
-  } = getState()
-
-  if (useMockData) {
-    return Promise.resolve(mockdata)
-  }
-
-  return Promise.resolve({})
-}
+export const receiveProfileSuccess = (json, receivedAt = Date.now()) => ({
+  type: RECEIVE_PROFILE,
+  json,
+  receivedAt
+})
 
 /* initial state */
 export const initialState = {
-  /* profile metadata */
   error: null,
   errorCode: null,
   isError: false,
   isFetching: false,
+  isSignedIn: false,
   lastReceivedAt: null,
-  /* profile details */
-  city: null,
-  country: null,
-  email: null,
-  events: [],
-  friends: [],
-  gender: null,
-  id: null,
-  ip_address: null,
-  profile_name: null,
-  rank: null,
-  rating: null,
-  region: null,
-  venues: []
+  lastSignin: null
 }
 
 export default function profile(state = initialState, action) {
   switch (action.type) {
-    case INVALIDATE_PROFILE: {
-      const { lastReceivedAt } = state
-
+    case INVALIDATE_PROFILE:
       return {
-        ...initialState,
-        lastReceivedAt
+        ...initialState
       }
-    }
-
-    case FETCH_PROFILE_REQUEST: {
-      return {
-        ...state,
-        isFetching: true
-      }
-    }
-
-    case FETCH_PROFILE_FAILURE: {
-      const { error, errorCode, receivedAt } = action
-
-      return {
-        ...state,
-        error,
-        errorCode,
-        isFetching: false,
-        receivedAt
-      }
-    }
-
-    case FETCH_PROFILE_SUCCESS: {
-      const { json, receivedAt } = action
-
-      /* whitelisting allowed properties */
-      const {
-        city,
-        country,
-        email,
-        events,
-        friends,
-        gender,
-        id,
-        ip_address,
-        profile_name,
-        rank,
-        rating,
-        region,
-        venues
-      } = json
-
-      return {
-        ...state,
-        isFetching: false,
-        receivedAt,
-        city,
-        country,
-        email,
-        events,
-        friends,
-        gender,
-        id,
-        ip_address,
-        profile_name,
-        rank,
-        rating,
-        region,
-        venues
-      }
-    }
-
     default:
       return state
   }

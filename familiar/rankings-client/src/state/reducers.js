@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
-import meta from './meta'
+import metadata from './metadata'
 import profile from './profile'
 import testDispatch from './testDispatch'
 
 const reducers = combineReducers({
-  meta,
+  metadata,
   profile,
   test: testDispatch
 })
