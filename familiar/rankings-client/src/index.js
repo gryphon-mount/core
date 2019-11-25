@@ -10,6 +10,7 @@ import { Provider } from 'react-redux'
 import configureStore from './state/store'
 
 /* style */
+import 'normalize.css'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './theme'
 
