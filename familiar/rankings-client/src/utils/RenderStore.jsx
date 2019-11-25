@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
 
 import { testDispatch } from 'state/testDispatch'
+import { getEnv } from 'state/meta'
 
 class RenderStore extends Component {
   static propTypes = {
@@ -13,6 +14,10 @@ class RenderStore extends Component {
 
   static defaultProps = {
     store: {}
+  }
+
+  state = {
+    isShown: false
   }
 
   render() {
@@ -34,32 +39,40 @@ class RenderStore extends Component {
       fontFamily: 'monospace'
     }
 
-    const { handleClick, store } = this.props
+    const { env, handleClick, store } = this.props
+    const { isShown } = this.state
 
-    return (
-      <pre style={preStyle}>
-        <p>
-          <strong>Application Data</strong>
-        </p>
-        {JSON.stringify(store, null, 2)}
-        <p>
-          <button style={buttonStyle} onClick={handleClick}>
-            Action Test
-          </button>
-        </p>
-      </pre>
-    )
+    if (env === 'development') {
+      console.log('⭐ STATE ⭐', store)
+
+      if (isShown) {
+        return (
+          <pre style={preStyle}>
+            <p>
+              <strong>Application Data</strong>
+            </p>
+            {JSON.stringify(store, null, 2)}
+            <p>
+              <button style={buttonStyle} onClick={handleClick}>
+                Action Test
+              </button>
+            </p>
+          </pre>
+        )
+      }
+    }
+
+    return <Fragment />
   }
 }
 
 const mapState = state => ({
+  env: getEnv(state),
   store: state
 })
 
 const mapDispatch = dispatch => ({
-  handleClick: () => {
-    dispatch(testDispatch())
-  }
+  handleClick: () => dispatch(testDispatch())
 })
 
 export default connect(
