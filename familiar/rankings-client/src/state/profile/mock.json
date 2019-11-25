@@ -1,5 +1,4 @@
 {
-  "username": "mockname",
   "city": "Houston",
   "country": "US",
   "email": "mockname@psu.edu",
@@ -8,7 +7,7 @@
   "gender": "Female",
   "id": 1,
   "ip_address": "104.168.25.240",
-  "profile_name": "Mocky McMockFace",
+  "profile_name": "Mocky",
   "rank": "Super Mocker Bros.",
   "rating": 1120,
   "region": "Texas",

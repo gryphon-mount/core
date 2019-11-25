@@ -41,11 +41,19 @@ export const fetchProfile = () => (dispatch, getState) => {
     meta: { useMockData }
   } = getState()
 
+  console.log(getState())
+
   if (useMockData) {
-    return Promise.resolve(mockdata)
+    return Promise.resolve(mockdata).then(
+      json => dispatch(requestProfileSuccess(json)),
+      err => dispatch(requestProfileFailure(err))
+    )
   }
 
-  return Promise.resolve({})
+  return Promise.resolve({}).then(
+    json => dispatch(requestProfileSuccess(json)),
+    err => dispatch(requestProfileFailure(err))
+  )
 }
 
 /* initial state */
@@ -65,7 +73,7 @@ export const initialState = {
   gender: null,
   id: null,
   ip_address: null,
-  profile_name: null,
+  name: null,
   rank: null,
   rating: null,
   region: null,
@@ -148,4 +156,4 @@ export default function profile(state = initialState, action) {
 }
 
 /* selectors */
-// export const getProfileUsername = ({ profile: { username } }) => username
+export const getProfileName = ({ profile: { profile_name } }) => profile_name
