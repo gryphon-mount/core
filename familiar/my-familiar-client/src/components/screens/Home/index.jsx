@@ -3,17 +3,13 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getAppName, getProductName } from 'state/meta'
+import { getAppName } from 'state/meta'
 import logo from './familiar_logo.jpg'
 
-export const Home = ({ appName, productName }) => (
+export const Home = ({ appName }) => (
   <StyledContainer>
     <Logo src={`${logo}`} alt="Familiar: Mythic Arena" />
-    <h2>
-      {appName}
-      <br />
-      <small style={{ fontWeight: 'lighter' }}>{productName}</small>
-    </h2>
+    <h2>{appName}</h2>
   </StyledContainer>
 )
 
@@ -31,8 +27,7 @@ const Logo = styled.img`
 `
 
 const mapState = state => ({
-  appName: getAppName(state),
-  productName: getProductName(state)
+  appName: getAppName(state)
 })
 
 export default connect(mapState)(Home)

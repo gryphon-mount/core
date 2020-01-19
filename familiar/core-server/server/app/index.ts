@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 
 const app = express()
 
-app.use(express.static('node_modules/rankings-client/build'))
+app.use(express.static('node_modules/my-familiar-client/build'))
 app.use(express.static('node_modules/admin-client/build'))
 
 app.use(bodyParser.json())
@@ -32,7 +32,10 @@ app.get('/admin/*', function(req: any, res: any) {
 
 app.get('*', function(req: any, res: any) {
   res.sendFile(
-    path.join(__dirname, '../../node_modules/rankings-client/build/index.html')
+    path.join(
+      __dirname,
+      '../../node_modules/my-familiar-client/build/index.html'
+    )
   )
 })
 

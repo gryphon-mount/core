@@ -1,9 +1,9 @@
 {
-  "name": "rankings-client",
+  "name": "my-familiar-client",
   "version": "1.0.0",
   "description": "Tournament rankings client for Familiar: Mythic Arena",
   "author": "Denny S. Temple (https://dentemple.com/)",
-  "license": "SEE LICENSE IN /LICENSE.md",
+  "license": "AGPL-3.0",
   "private": true,
   "scripts": {
     "build": "react-scripts build",
@@ -19,8 +19,9 @@
     "update:check": "ncu"
   },
   "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.5.1",
     "http-proxy-middleware": "^0.20.0",
-    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

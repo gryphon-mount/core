@@ -1,26 +1,25 @@
 import { createGlobalStyle } from 'styled-components'
 import WebFont from 'webfontloader'
 
-import 'normalize.css'
+import { allBorderOutlines } from 'components/atoms/styles'
+
+WebFont.load({
+  google: {
+    families: ['Volkhov', 'Roboto', 'Material+Icons']
+  }
+})
 
 export const colors = {
-  black: '#222',
-  white: '#fff',
-  gray: '#ccc',
-  // ---
+  black: '#111111',
+  white: '#ffffff',
+  gray: '#cccccc',
   blue: '#0074ff',
   // ---
   links: '#61dafb'
 }
 
-WebFont.load({
-  google: {
-    families: ['Volkhov', 'Source Sans Pro']
-  }
-})
-
 export const fonts = {
-  primary: `"Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  primary: `"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`,
   secondary: `"Volkhov", serif`,
   monospace: `source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace`
@@ -59,18 +58,15 @@ export const theme = {
 
 export const GlobalStyle = createGlobalStyle`
 body {
-  /* box */
-  margin: 0;
-  padding: 0;
+
+  /* dev-only top-level styles */
+  ${allBorderOutlines}
+
 
   /* content */
   color: ${colors.black};
   background-color: ${colors.white};
   font-family: ${fonts.primary};
-  font-size: 1.1em;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,16 +79,6 @@ h2 {
 
 code {
   font-family: ${fonts.monospace};
-}
-
-ul {
-   list-style: none;
-}
-
-ul>li:before {
-  content: "•";
-  font-size: 1em;
-  padding-right: 5px;
 }
 `
 
