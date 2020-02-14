@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import CssBaseline from '@material-ui/core/CssBaseline'
 import { GlobalStyle } from 'theme'
 import RenderStore from 'utils/RenderStore'
 import Routes from 'App/Routes'
@@ -24,7 +23,6 @@ export class App extends Component {
   render() {
     return (
       <>
-        <CssBaseline />
         <GlobalStyle />
         <main>
           <Routes />

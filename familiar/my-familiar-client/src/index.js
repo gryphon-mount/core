@@ -7,17 +7,17 @@ import 'whatwg-fetch'
 
 /* state */
 import { Provider } from 'react-redux'
-import configureStore from './state/store'
+import configureStore from 'state/store'
 
 /* style */
 import { ThemeProvider } from 'styled-components'
-import { theme } from './theme'
+import { theme } from 'theme'
 
 /* utils */
-import * as serviceWorker from './utils/serviceWorker'
+import * as serviceWorker from 'utils/serviceWorker'
 
 /* components */
-import App from './App'
+import App from 'App'
 
 const render = Component =>
   ReactDOM.render(
